@@ -27,10 +27,16 @@ function displayResult(expression)
 }
 
 function getUrl(methodType) {
+    let slugOperations = new Map([
+        ['+', 'add'],
+        ['/', 'divide'],
+        ['*', 'multiply'],
+        ['-', 'subtract'],
+    ])
     let baseUrl = location.protocol + '//' + location.host;
     let firstNumber = document.getElementById('firstNumber').value;
     let secondNumber = document.getElementById('secondNumber').value;
-    let operation = document.getElementById('operation').value;
+    let operation = slugOperations.get(document.getElementById('operation').value);
     switch (methodType) {
         case 'model-binding':
             return baseUrl + '/api/model-binding/' + firstNumber + '/' + secondNumber + '/' + operation;

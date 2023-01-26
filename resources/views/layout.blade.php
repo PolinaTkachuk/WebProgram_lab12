@@ -83,5 +83,24 @@
         margin-top: 30px;
         font-size: 16px;
     }
+    .col-md-12 {
+        width: 600px;
+    }
+    .col-md-12 .form-control{
+        border: rebeccapurple 2px solid ;
+    }
+    #operation{
+        margin-top: 10px;
+    }
+
+    .form-control-list option
+    {
+
+        width: 40px;
+    }
+    button{
+        margin-top: 11px;
+    }
+
 </style>
 
